@@ -53,13 +53,16 @@
             p 報到
         b-col.list(cols="12")
           b-col.time.text-secondary.m-0(cols="6", md="3") 13.30 ~ 13.40
-          b-col.photo(cols="6", md="3") 零壹科技總經理
+          b-col.photo(cols="6", md="3")
+            b-col(cols="12" xl="9").d-flex.flex-column.align-items-end.align-items-md-center.p-0
+              | 零壹科技總經理
+            b-col(cols="1").icon
           b-col(cols="12", md="6")
             p 打造零壹與企業IT的共榮平台生態圈
         b-col.list(cols="12")
           b-col.time.text-secondary.m-0(cols="6", md="3") 13.40 ~ 14.10
           b-col.photo(cols="6", md="3")
-            b-col(cols="11" xl="8").d-flex.flex-column.align-items-end.align-items-md-center.p-0
+            b-col(cols="12" xl="9").d-flex.flex-column.align-items-end.align-items-md-center.p-0
               b-img(:src="require('@/assets/images/speaker/01.jpg')")
               | 勤業眾信
             b-col(cols="1").icon
@@ -69,7 +72,7 @@
         b-col.list(cols="12")
           b-col.time.text-secondary.m-0(cols="6", md="3") 14.10 ~ 14.30
           b-col.photo(cols="6", md="3")
-            b-col(cols="11" xl="8").d-flex.flex-column.align-items-end.align-items-md-center.p-0
+            b-col(cols="12" xl="9").d-flex.flex-column.align-items-end.align-items-md-center.p-0
               b-img(:src="require('@/assets/images/speaker/02.jpg')")
               .d-flex.flex-md-column
                 span 零壹技術顧問
@@ -81,7 +84,7 @@
         b-col.list(cols="12")
           b-col.time.text-secondary.m-0(cols="6", md="3") 14.30 ~ 14.50
           b-col.photo(cols="6", md="3")
-            b-col(cols="12" xl="8").d-flex.flex-column.align-items-end.align-items-md-center.p-0
+            b-col(cols="12" xl="9").d-flex.flex-column.align-items-end.align-items-md-center.p-0
               b-img(:src="require('@/assets/images/speaker/03.jpg')")
               .d-flex.flex-md-column
                 span 零壹技術顧問
@@ -93,7 +96,7 @@
         b-col.list(cols="12")
           b-col.time.text-secondary.m-0(cols="6", md="3") 14.50 ~ 15.10
           b-col.photo(cols="6", md="3")
-            b-col(cols="11" xl="8").d-flex.flex-column.align-items-end.align-items-md-center.p-0
+            b-col(cols="12" xl="9").d-flex.flex-column.align-items-end.align-items-md-center.p-0
               b-img(:src="require('@/assets/images/speaker/04.jpg')")
               .d-flex.flex-md-column
                 span 零壹技術顧問
@@ -108,7 +111,10 @@
             p 現場交流與攤位展示
         b-col.list(cols="12")
           b-col.time.text-secondary.m-0(cols="6", md="3") 16.00 ~ 16.20
-          b-col.photo(cols="6", md="3") 零壹科技
+          b-col.photo(cols="6", md="3")
+            b-col(cols="12" xl="9").d-flex.flex-column.align-items-end.align-items-md-center.p-0
+              | 零壹科技
+            b-col(cols="1").icon
           b-col(cols="12", md="6")
             p 零壹方案整合架構與產業應用
         b-col.list(cols="12")
