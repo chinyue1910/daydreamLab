@@ -6,10 +6,10 @@ import store from './store'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-import { faUserFriends, faTicketAlt, faMapMarkedAlt, faMapMarkerAlt, faCalendarPlus, faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons'
+import { faUserFriends, faTicketAlt, faMapMarkedAlt, faMapMarkerAlt, faCalendarPlus, faAngleLeft, faAngleRight, faPlus } from '@fortawesome/free-solid-svg-icons'
 import { faFacebookF, faTwitter, faLine } from '@fortawesome/free-brands-svg-icons'
 import { faClock } from '@fortawesome/free-regular-svg-icons'
-library.add(faClock, faUserFriends, faTicketAlt, faFacebookF, faTwitter, faLine, faMapMarkedAlt, faMapMarkerAlt, faCalendarPlus, faAngleLeft, faAngleRight)
+library.add(faClock, faUserFriends, faTicketAlt, faFacebookF, faTwitter, faLine, faMapMarkedAlt, faMapMarkerAlt, faCalendarPlus, faAngleLeft, faAngleRight, faPlus)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 

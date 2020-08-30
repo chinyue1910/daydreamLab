@@ -59,29 +59,47 @@
         b-col.list(cols="12")
           b-col.time.text-secondary.m-0(cols="6", md="3") 13.40 ~ 14.10
           b-col.photo(cols="6", md="3")
-            b-img(:src="require('@/assets/images/speaker/01.jpg')")
-            | 勤業眾信
+            b-col(cols="11" xl="8").d-flex.flex-column.align-items-end.align-items-md-center.p-0
+              b-img(:src="require('@/assets/images/speaker/01.jpg')")
+              | 勤業眾信
+            b-col(cols="1").icon
+              font-awesome-icon(:icon="['fas', 'plus']")
           b-col(cols="12", md="6")
             p 解析台灣企業數位轉型的挑戰與契機
         b-col.list(cols="12")
           b-col.time.text-secondary.m-0(cols="6", md="3") 14.10 ~ 14.30
           b-col.photo(cols="6", md="3")
-            b-img(:src="require('@/assets/images/speaker/02.jpg')")
-            | 零壹技術顧問楊博文
+            b-col(cols="11" xl="8").d-flex.flex-column.align-items-end.align-items-md-center.p-0
+              b-img(:src="require('@/assets/images/speaker/02.jpg')")
+              .d-flex.flex-md-column
+                span 零壹技術顧問
+                span 楊博文
+            b-col(cols="1").icon
+              font-awesome-icon(:icon="['fas', 'plus']")
           b-col(cols="12", md="6")
             p 躍進多雲環境，強化資料管理與安全應用
         b-col.list(cols="12")
           b-col.time.text-secondary.m-0(cols="6", md="3") 14.30 ~ 14.50
           b-col.photo(cols="6", md="3")
-            b-img(:src="require('@/assets/images/speaker/03.jpg')")
-            | 零壹技術顧問陳鳴豪
+            b-col(cols="12" xl="8").d-flex.flex-column.align-items-end.align-items-md-center.p-0
+              b-img(:src="require('@/assets/images/speaker/03.jpg')")
+              .d-flex.flex-md-column
+                span 零壹技術顧問
+                span 陳鳴豪
+            b-col(cols="1").icon
+              font-awesome-icon(:icon="['fas', 'plus']")
           b-col(cols="12", md="6")
             p 企業資安防禦面面觀
         b-col.list(cols="12")
           b-col.time.text-secondary.m-0(cols="6", md="3") 14.50 ~ 15.10
           b-col.photo(cols="6", md="3")
-            b-img(:src="require('@/assets/images/speaker/04.jpg')")
-            | 零壹技術顧問楊炳文
+            b-col(cols="11" xl="8").d-flex.flex-column.align-items-end.align-items-md-center.p-0
+              b-img(:src="require('@/assets/images/speaker/04.jpg')")
+              .d-flex.flex-md-column
+                span 零壹技術顧問
+                span 楊炳文
+            b-col(cols="1").icon
+              font-awesome-icon(:icon="['fas', 'plus']")
           b-col(cols="12", md="6")
             p 新融合 - 經典中帶著創新的融合新應用
         b-col.list(cols="12")
@@ -295,15 +313,12 @@ h6 {
       color: #6c757d;
       font-weight: 600;
       font-size: 10px;
-      flex: 1 0 50%;
       display: flex;
-      flex-direction: column;
-      align-items: flex-end;
+      justify-content: flex-end;
       @include sm {
         font-size: 15px;
         text-align: center;
         align-items: center;
-        flex: 0 0 25%;
         order: 4;
       }
       img {
@@ -312,6 +327,15 @@ h6 {
         border-radius: 50%;
         display: none;
         @include sm {
+          display: block;
+        }
+      }
+      .icon{
+        font-size: 1.5rem;
+        color: #aacd06;
+        cursor: pointer;
+        display: none;
+        @include sm{
           display: block;
         }
       }
