@@ -22,12 +22,17 @@ b-navbar(toggleable="md", type="light")
   }
 }
 .navbar {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 99999999;
   @include sm {
     position: absolute;
     top: 0;
     z-index: 1;
     width: 100%;
     padding: 0;
+    background-color: transparent;
   }
   .navbar-brand {
     width: 40vw;
