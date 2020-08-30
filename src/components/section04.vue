@@ -23,7 +23,7 @@
           .line.my-3
           b-button.badge-pill.align-self-start.px-5.my-3 了解更多
     b-row(v-if="selected === '主題館'")
-      b-col.p-0.theme(v-for="(data, index) in datas1", :key="index", cols="12")
+      b-col.theme(v-for="(data, index) in datas1", :key="index", cols="12")
         b-col.p-0.photo1(cols="12", md="4")
           b-img(:src="require('@/assets/images/theme/theme' + (index + 1) + '.jpg')")
         b-col.text1(cols="12", md="8")
@@ -203,8 +203,6 @@ img {
 }
 
 .theme {
-  border-radius: 30px;
-  overflow: hidden;
   margin: 3rem 0;
   display: flex;
   flex-wrap: wrap;
@@ -216,25 +214,41 @@ img {
       height: 100%;
     }
   }
+  .photo1{
+    border-radius: 50px 50px 0 0;
+    overflow: hidden;
+    @include sm{
+      border-radius: 50px 0 0 50px;
+    }
+  }
   .text1 {
-    padding: 0 50px;
     background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    border-radius: 0 0 50px 50px;
+        @include sm{
+      border-radius: 0 50px 50px 0;
+    }
     h2 {
       padding: 15px 0;
       color: #aacd06;
       font-weight: bolder;
+      font-size: 1.5rem;
+      @include sm{
+        font-size: 2rem;
+      }
     }
   }
   &:nth-child(2) {
     @include sm {
       .photo1 {
         order: 2;
+        border-radius: 0 50px 50px 0;
       }
       .text1 {
         order: 1;
+        border-radius: 50px 0 0 50px;
       }
     }
   }

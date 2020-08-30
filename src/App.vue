@@ -1,18 +1,23 @@
 <template lang="pug">
-  #app
-    navbar
-    section01
-    section02
-    section03
-    section04
-    section05
-    section06
-    b-nav(pills card-header slot="header" v-b-scrollspy="{element: '#app', offset:540}").m-0.tab
-      b-nav-item(href='#section01' :style="{'--bgcolor':bgcolor}") 首頁
-      b-nav-item(href='#section02' :style="{'--bgcolor':bgcolor}") 啟動大會
-      b-nav-item(href='#section03' :style="{'--bgcolor':bgcolor}") 贊助單位
-      b-nav-item(href='#section04' :style="{'--bgcolor':bgcolor}") 產品館
-      b-nav-item(href='#section05' :style="{'--bgcolor':bgcolor}") 玩活動
+#app
+  navbar
+  section01
+  section02
+  section03
+  section04
+  section05
+  section06
+  b-nav.m-0.tab(
+    pills,
+    card-header,
+    slot="header",
+    v-b-scrollspy="{element: '#app', offset:540}"
+  )
+    b-nav-item(href="#section01", :style="{ '--bgcolor': bgcolor }") 首頁
+    b-nav-item(href="#section02", :style="{ '--bgcolor': bgcolor }") 啟動大會
+    b-nav-item(href="#section03", :style="{ '--bgcolor': bgcolor }") 贊助單位
+    b-nav-item(href="#section04", :style="{ '--bgcolor': bgcolor }") 產品館
+    b-nav-item(href="#section05", :style="{ '--bgcolor': bgcolor }") 玩活動
 </template>
 
 <script>
@@ -39,58 +44,74 @@ export default {
   },
   computed: {
     bgcolor () {
-      return (this.section === '#section01' || this.section === '#section03') ? 'white' : '#aacd06'
+      return this.section === '#section01' || this.section === '#section03'
+        ? 'white'
+        : '#aacd06'
     }
   },
   components: {
-    navbar, section01, section02, section03, section04, section05, section06
+    navbar,
+    section01,
+    section02,
+    section03,
+    section04,
+    section05,
+    section06
   }
 }
 </script>
 
 <style lang="scss">
-* {
-margin: 0;
-padding: 0;
-font-family: '微軟正黑體';
-box-sizing: border-box;
-scroll-behavior: smooth;
+@mixin sm {
+  @media (min-width: 768px) {
+    @content;
+  }
 }
-#app{
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "微軟正黑體";
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+#app {
   position: relative;
   height: 100vh;
   overflow-y: scroll;
 }
-.tab{
-  position: fixed;
-  top: 50%;
-  right: 20px;
-  transform: translateY(-50%);
-  display: flex;
-  flex-direction: column;
-  font-size: 0.5rem;
-  text-align: end;
-  a{
-    color: transparent;
-    position: relative;
-    padding: 0;
-    &::before{
-      content: "";
-      position: absolute;
-      width: 10px;
-      height: 2px;
-      right: 0;
-      top: 50%;
-      background-color: gray;
-      transform: translateY(-50%);
-      z-index: -1;
+.tab {
+  display: none !important;
+  @include sm {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    display: flex !important;
+    flex-direction: column;
+    font-size: 0.5rem;
+    text-align: end;
+    a {
+      color: transparent;
+      position: relative;
+      padding: 0;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 2px;
+        right: 0;
+        top: 50%;
+        background-color: gray;
+        transform: translateY(-50%);
+        z-index: -1;
+      }
     }
   }
-  .nav-link.active{
+  .nav-link.active {
     background-color: transparent;
     color: var(--bgcolor);
     margin-right: 20px;
-    &::before{
+    &::before {
       content: "";
       position: absolute;
       width: 20px;

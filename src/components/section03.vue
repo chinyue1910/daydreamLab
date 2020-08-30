@@ -2,22 +2,31 @@
 #section03
   b-container.text-white
     b-row.justify-content-between
-      b-col.d-flex.align-items-end(cols="12" md="6")
+      b-col.d-flex.align-items-end(cols="12", md="6")
         h1.m-0 贊助產商
         h2.m-0 Awesome Sponsors
-      b-col.d-flex.justify-content-md-end.justify-content-around(cols="12" md="6")
-        h3.m-0(@click="select('白金級')", :class="{ selected: selected === '白金級' }") 白金級
-        h3.m-0(@click="select('黃金級')", :class="{ selected: selected === '黃金級' }") 黃金級
+      b-col.d-flex.justify-content-md-end.justify-content-around(
+        cols="12",
+        md="6"
+      )
+        h3.m-0(
+          @click="select('白金級')",
+          :class="{ selected: selected === '白金級' }"
+        ) 白金級
+        h3.m-0(
+          @click="select('黃金級')",
+          :class="{ selected: selected === '黃金級' }"
+        ) 黃金級
         h3.m-0(@click="select('銀級')", :class="{ selected: selected === '銀級' }") 銀級
     b-row.sponsor(v-if="selected === '白金級'")
-      b-col.item(cols="6", md="3" v-for="(data,index) in 4" :key="index")
-        b-img(:src="require('@/assets/images/sponsor1/'+data+'.png')")
+      b-col.item(cols="6", md="3", v-for="(data, index) in 4", :key="index")
+        b-img(:src="require('@/assets/images/sponsor1/' + data + '.png')")
     b-row.sponsor(v-if="selected === '黃金級'")
-      b-col.item(cols="6", md="2" v-for="(data,index) in 12" :key="index")
-        b-img(:src="require('@/assets/images/sponsor2/'+data+'.png')")
+      b-col.item(cols="6", md="2", v-for="(data, index) in 12", :key="index")
+        b-img(:src="require('@/assets/images/sponsor2/' + data + '.png')")
     b-row.sponsor(v-if="selected === '銀級'")
-      b-col.item(cols="6", md="3" v-for="(data,index) in 4" :key="index")
-        b-img(:src="require('@/assets/images/sponsor3/'+data+'.png')")
+      b-col.item(cols="6", md="3", v-for="(data, index) in 4", :key="index")
+        b-img(:src="require('@/assets/images/sponsor3/' + data + '.png')")
 </template>
 
 <script>
@@ -47,13 +56,20 @@ export default {
 }
 h1 {
   font-weight: bolder;
-  padding: 0 1rem;
+  flex: 1 0 auto;
+  font-size: 2rem;
+  @include sm {
+    font-size: 40px;
+  }
 }
 h2 {
   font-weight: bolder;
   padding: 0 1rem;
   font-size: 1rem;
-  letter-spacing: 5px;
+  flex: 1 0 auto;
+  @include sm {
+    letter-spacing: 5px;
+  }
 }
 .item {
   padding: 15px;

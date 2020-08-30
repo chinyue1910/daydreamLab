@@ -80,7 +80,7 @@ export default {
 }
 #section05 {
   padding: 100px 0;
-  height: 100vh;
+  min-height: 100vh;
   overflow: hidden;
 }
 .box {

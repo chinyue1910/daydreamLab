@@ -84,6 +84,16 @@
       justify-content: center;
       align-items: center;
       margin-right: 0.5rem;
+      transform: scale(0.5);
+      @include sm{
+        transform: scale(1);
+      }
+    }
+    p{
+      font-size:0.5rem;
+      @include sm{
+        font-size: 1rem;
+      }
     }
   }
 }
