@@ -58,6 +58,7 @@ h1 {
   font-weight: bolder;
   flex: 1 0 auto;
   font-size: 2rem;
+  text-align: center;
   @include sm {
     font-size: 40px;
   }
